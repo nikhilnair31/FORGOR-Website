@@ -3,6 +3,9 @@ dist/
 
 # generated types
 .astro/
+.vscode/
+.well-known/
+src/js/config.js
 
 # dependencies
 node_modules/

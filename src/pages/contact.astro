@@ -1,0 +1,33 @@
+---
+// src/pages/contact.astro
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="FORGOR - Contact Us">
+    <Header />
+    
+    <main class="flex-grow flex items-center justify-center p-8">
+        <section class="text-center max-w-2xl">
+            <h1 class="text-white text-4xl sm:text-5xl font-display mb-6">Contact FORGOR</h1>
+            <p class="text-white text-lg leading-relaxed mb-4">
+                Have questions, feedback, or need support? We're here to help!
+                Reach out to us through the following channels.
+            </p>
+            <ul class="text-white text-lg leading-relaxed mb-6 space-y-2">
+                <li><strong>Email:</strong> <a href="mailto:support@forgor.space" class="text-neonGreen hover:underline">support@forgor.space</a></li>
+                <li><strong>Social Media:</strong> Find us on <a href="#" class="text-neonGreen hover:underline">Twitter</a> and <a href="#" class="text-neonGreen hover:underline">LinkedIn</a></li>
+                <li><strong>Support Hours:</strong> Monday - Friday, 9:00 AM - 5:00 PM EST</li>
+            </ul>
+            <p class="text-white text-lg leading-relaxed">
+                We aim to respond to all inquiries within 24-48 business hours.
+            </p>
+            <div class="mt-8">
+                <a href="/" class="inline-block bg-neonGreen text-purple-900 font-bold py-2 px-5 hover:opacity-90">Back to Home</a>
+            </div>
+        </section>
+    </main>
+    
+    <Footer />
+</Layout>

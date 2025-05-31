@@ -1,0 +1,104 @@
+---
+// src/pages/login.astro
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="FORGOR - Sign Up / Log In">
+    <Header />
+    
+    <main class="flex-grow flex items-center justify-center p-8">
+        <section class="bg-purple-700 p-8 shadow-xl max-w-md w-full">
+            <h1 class="text-white text-3xl font-display text-center mb-6">Join FORGOR</h1>
+            
+            {/* Tab Navigation */}
+            <div class="flex justify-center mb-6">
+                <button class="tab active px-4 py-2 text-neonGreen border-b-2 border-neonGreen hover:text-white" data-target="login-form-container">Log In</button>
+                <button class="tab px-4 py-2 text-gray-400 hover:text-white" data-target="register-form-container">Register</button>
+            </div>
+
+            {/* Login Form Container */}
+            <div id="login-form-container" class="form active">
+                <form id="login-form" class="space-y-4">
+                    <div>
+                        <label for="login-username" class="block text-white text-sm font-bold mb-2">Username</label>
+                        <input
+                            type="text"
+                            id="login-username"
+                            name="username"
+                            placeholder="your_username"
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
+                        />
+                    </div>
+                    <div>
+                        <label for="login-password" class="block text-white text-sm font-bold mb-2">Password</label>
+                        <input
+                            type="password"
+                            id="login-password"
+                            name="password"
+                            placeholder="********"
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
+                        />
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <button
+                            type="submit"
+                            id="login-button"
+                            class="bg-neonGreen text-purple-900 font-bold py-2 px-4 hover:opacity-90 focus:outline-none focus:shadow-outline"
+                        >
+                            Log In
+                        </button>
+                        <a href="#" class="inline-block align-baseline font-bold text-sm text-neonGreen hover:text-white">
+                            Forgot Password?
+                        </a>
+                    </div>
+                </form>
+            </div>
+
+            {/* Register Form Container */}
+            <div id="register-form-container" class="form hidden"> {/* Start hidden */}
+                <form id="register-form" class="space-y-4">
+                    <div>
+                        <label for="register-username" class="block text-white text-sm font-bold mb-2">Username</label>
+                        <input
+                            type="text"
+                            id="register-username"
+                            name="username"
+                            placeholder="choose_username"
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
+                        />
+                    </div>
+                    <div>
+                        <label for="register-password" class="block text-white text-sm font-bold mb-2">Password</label>
+                        <input
+                            type="password"
+                            id="register-password"
+                            name="password"
+                            placeholder="********"
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline bg-gray-200"
+                        />
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <button
+                            type="submit"
+                            id="register-button"
+                            class="bg-neonGreen text-purple-900 font-bold py-2 px-4 hover:opacity-90 focus:outline-none focus:shadow-outline"
+                        >
+                            Register
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            {/* Added a place for messages/errors */}
+            <p id="auth-message" class="text-center text-red-400 mt-4"></p>
+
+        </section>
+    </main>
+    
+    <Footer />
+
+    {/* Client-side script for login/register logic */}
+    <script type="module" src="../js/login.js"></script>
+</Layout>

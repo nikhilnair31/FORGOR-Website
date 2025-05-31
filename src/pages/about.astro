@@ -1,0 +1,31 @@
+---
+// src/pages/about.astro
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="FORGOR - About Us">
+    <Header />
+    
+    <main class="flex-grow flex items-center justify-center p-8">
+        <section class="text-center max-w-2xl">
+            <h1 class="text-white text-4xl sm:text-5xl font-display mb-6">About FORGOR</h1>
+            <p class="text-white text-lg leading-relaxed mb-4">
+                FORGOR is an innovative AI memory system designed to capture and preserve
+                all your valuable moments and information, automatically and intelligently.
+                Our mission is to ensure that no memory, no idea, no important detail is ever truly lost.
+            </p>
+            <p class="text-white text-lg leading-relaxed">
+                We believe in a future where your personal history and knowledge are effortlessly
+                maintained, empowering you to recall, revisit, and build upon your experiences
+                with unparalleled ease.
+            </p>
+            <div class="mt-8">
+                <a href="/" class="inline-block bg-neonGreen text-purple-900 font-bold py-2 px-5 hover:opacity-90">Back to Home</a>
+            </div>
+        </section>
+    </main>
+    
+    <Footer />
+</Layout>

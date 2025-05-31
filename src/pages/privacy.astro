@@ -1,0 +1,35 @@
+---
+// src/pages/privacy.astro
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="FORGOR - Privacy Policy">
+    <Header />
+    
+    <main class="flex-grow flex items-center justify-center p-8">
+        <section class="text-center max-w-3xl">
+            <h1 class="text-white text-4xl sm:text-5xl font-display mb-6">Privacy Policy</h1>
+            <p class="text-white text-lg leading-relaxed mb-4">
+                Your privacy is paramount at FORGOR. We are committed to protecting
+                your personal data and ensuring a secure experience. This policy
+                outlines how we collect, use, and safeguard your information.
+            </p>
+            <p class="text-white text-lg leading-relaxed mb-4">
+                We only collect data necessary to provide and improve our AI memory
+                system, and we never share your personal information with third parties
+                without your explicit consent. All data is encrypted and stored securely.
+            </p>
+            <p class="text-white text-lg leading-relaxed">
+                By using FORGOR, you agree to the terms outlined in this Privacy Policy.
+                We may update this policy periodically, and any changes will be posted here.
+            </p>
+            <div class="mt-8">
+                <a href="/" class="inline-block bg-neonGreen text-purple-900 font-bold py-2 px-5 hover:opacity-90">Back to Home</a>
+            </div>
+        </section>
+    </main>
+    
+    <Footer />
+</Layout>

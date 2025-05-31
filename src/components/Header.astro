@@ -1,0 +1,18 @@
+---
+// src/components/Header.astro
+---
+<header class="flex justify-between items-center p-6">
+    <div class="text-white text-xl font-display">FORGOR</div>
+    <nav class="flex items-center gap-10 text-sm uppercase tracking-widest">
+        <a href="/" class="hover:underline">Home</a> {/* <-- Added Home link */}
+        <a href="/about" class="hover:underline">About</a>
+        <a href="/privacy" class="hover:underline">Privacy</a>
+        <a href="/app" class="hover:underline">App</a>
+        <a href="/contact" class="hover:underline">Contact</a>
+        
+        {/* Login/Signup Button - No rounding */}
+        <a href="/login" class="inline-block bg-neonGreen text-purple-900 font-bold py-3 px-6 hover:opacity-90 ml-4">
+            Sign Up / Log In
+        </a>
+    </nav>
+</header>
