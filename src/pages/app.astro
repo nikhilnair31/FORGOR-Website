@@ -4,35 +4,43 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="FORGOR - Search">
-    <div class="flex flex-col min-h-screen bg-purple"> {/* Use a darker purple for the app background */}
-        {/* Header for the App Page */}
-        <header class="flex items-center justify-between p-4 bg-purple-800">
-            {/* Logo/App Name */}
-            <div class="text-white text-2xl font-display">FORGOR</div>
+    <div class="flex flex-col min-h-screen bg-purple">
+        <header class="flex items-center justify-between p-4 bg-purple-800 gap-x-3">
+            <a href="/" class="flex items-center">
+                <img src="/icons/favicon.png" alt="FORGOR Icon" class="h-10 w-12"/>
+            </a>
             
-            {/* Search Bar */}
-            <div class="flex-grow mx-8 max-w-5xl">
+            <div class="flex-grow">
                 <input
                     type="text"
                     placeholder="what did you forget?"
-                    class="w-full py-2 px-4 font-display bg-neonGreen text-brightPurple uppercase placeholder-purple focus:outline-none focus:ring-2 focus:ring-neonGreen"
+                    class="w-full py-2 px-4 font-display bg-neonGreen text-brightPurple placeholder-brightPurple-200 uppercase focus:outline-none focus:ring-2 focus:ring-neonGreen"
                 />
             </div>
             
-            {/* User Button */}
-            <a href="/user" class="inline-flex items-center upper bg-brightPurple text-neonGreen font-bold py-2 px-4 hover:opacity-90">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
-            </a>
+            <div class="flex items-center gap-x-2">
+                <span id="usernameDisplay" class="text-brightPurple font-bold"></span>
+                <a href="/user">
+                    <div id="userIcon" class="flex justify-center items-center bg-neonGreen text-brightPurple font-bold h-10 w-10 rounded-full">
+                        <script>
+                            let username = localStorage.getItem('username');
+                            let userIcon = document.getElementById('userIcon');
+                            if (userIcon) {
+                                if (username) {
+                                    userIcon.textContent = username.charAt(0).toUpperCase();
+                                } else {
+                                    userIcon.textContent = 'U';
+                                }
+                            }
+                        </script>
+                    </div>
+                </a>
+            </div>
         </header>
 
-        {/* Main Content Area - Placeholder for search results */}
         <main class="flex-grow flex items-center justify-center p-8 text-white">
             <p class="text-xl text-gray-400">Your search results will appear here.</p>
         </main>
         
-        {/* You might not want the main footer here, or a simpler one */}
-        {/* <Footer /> */}
     </div>
 </Layout>
