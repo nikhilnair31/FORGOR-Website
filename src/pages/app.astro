@@ -43,4 +43,10 @@ import Layout from '../layouts/Layout.astro';
         </main>
         
     </div>
+
+    <script type="module">
+        // Import and call the client-side function
+        import { checkAuthAndRedirect } from '~/js/authUtils.js';
+        checkAuthAndRedirect();
+    </script>
 </Layout>

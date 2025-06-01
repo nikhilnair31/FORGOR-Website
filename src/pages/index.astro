@@ -1,29 +1,26 @@
 ---
 // src/pages/index.astro (Landing Page)
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro'; // <-- Import Header
-import Footer from '../components/Footer.astro'; // <-- Import Footer
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="FORGOR - Your AI Memory Vault">
     <Header />
     
     <main class="relative w-full flex-grow flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 from-purple-800 via-purple-700 to-yellow-400 opacity-60 blur-3xl z-0"></div>
-        
         <section class="z-10 text-left max-w-4xl px-8">
-            <h1 class="text-white text-5xl sm:text-7xl font-display leading-tight">
-                FORGOR — this is <br /> futureproof memory
+            <h1 class="text-5xl sm:text-7xl font-display leading-tight">
+                <a class="text-neonGreen underline" href="/app">FORGOR</a> 
+                — this is <br /> futureproof memory
             </h1>
             <p class="text-white mt-6 text-lg max-w-md">
                 An AI memory system that saves everything you care about — automatically, instantly, intelligently.
             </p>
         </section>
         
-        <section class="absolute bottom-10 right-10 flex gap-4 z-10">
-            <img src="/public/icons/icon.png" alt="feature 1" class="w-16 h-16" />
-            <img src="/public/icons/favicon.png" alt="feature 2" class="w-16 h-16" />
-            <img src="/public/icons/favicon.png" alt="feature 3" class="w-16 h-16" />
+        <section>
+            <img src="/icons/icon.png" alt="feature 1" class="absolute top-10 left-20 w-64 h-64" />
         </section>
     </main>
     
