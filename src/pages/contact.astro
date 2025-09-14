@@ -1,33 +1,37 @@
 ---
-// src/pages/contact.astro
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="FORGOR - Contact Us">
+<Layout title="FORGOR.space - Contact Us">
     <Header />
     
-    <main class="flex-grow flex items-center justify-center p-8">
-        <section class="text-center max-w-2xl">
-            <h1 class="text-white text-4xl sm:text-5xl font-display mb-6">Contact</h1>
-            <p class="text-white text-lg leading-relaxed mb-4">
-                Have questions, feedback, or need support? We're here to help!
+    <main class="flex-grow flex items-center justify-center p-8 text-white bg-purple-DEFAULT">
+        <section class="text-center max-w-3xl bg-purple-800 p-8 md:p-12 rounded-none">
+            <h1 class="text-neonGreen-DEFAULT text-4xl sm:text-5xl font-display mb-8">We'd Love to Hear From You.</h1>
+            <p class="text-lg leading-relaxed mb-8 opacity-90">
+                Whether you have a question, need support, or just want to share your feedback, the FORGOR.space team is here to help.
             </p>
-            <ul class="text-white text-lg leading-relaxed mb-6 space-y-2">
-                <li>
-                    <strong>Email:</strong>
-                    <a 
-                    href="mailto:nikhil@forgor.space?subject=FORGOR%20Support&body=Hi%20team%2C%0A%0A"
-                    class="text-neonGreen hover:underline"
-                    >
+            
+            <div class="mb-8">
+                <h2 class="text-neonGreen-DEFAULT text-2xl font-display mb-3">Get in Touch:</h2>
+                <p class="text-lg leading-relaxed opacity-90 mb-4">
+                    For all inquiries, including general questions, support requests, feedback, and business opportunities, please email us directly.
+                </p>
+                <a 
+                    href="mailto:nikhil@forgor.space?subject=FORGOR.space%20Inquiry&body=Hi%20FORGOR.space%20Team%2C%0A%0AI%20am%20contacting%20regarding%3A%0A%0A"
+                    class="text-neonGreen-DEFAULT text-xl font-bold hover:underline transition-colors duration-200"
+                >
                     nikhil@forgor.space
-                    </a>
-                </li>
-            </ul>
-            <p class="text-white text-lg leading-relaxed">
-                We aim to respond to all inquiries within 24-48 business hours.
-            </p>
+                </a>
+            </div>
+            
+            {/* Operating Hours */}
+            <div class="mt-12 text-lg opacity-80">
+                <p>Our team aims to respond to all inquiries within 24-48 business hours.</p>
+                <p>We are available Monday - Friday, 9 AM - 5 PM EST.</p>
+            </div>
         </section>
     </main>
     

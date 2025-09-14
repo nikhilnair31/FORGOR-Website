@@ -1,25 +1,37 @@
 ---
-// src/pages/about.astro
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="FORGOR - About Us">
+<Layout title="FORGOR.space - About Us" description="Learn about FORGOR.space's mission to empower your memory with AI, making sure your ideas and inspirations are never forgotten for Android and Chrome.">
     <Header />
     
-    <main class="flex-grow flex items-center justify-center p-8">
-        <section class="text-center max-w-2xl">
-            <h1 class="text-white text-4xl sm:text-5xl font-display mb-6">About</h1>
-            <p class="text-white text-lg leading-relaxed mb-4">
-                FORGOR is an innovative AI memory system designed to capture and preserve
-                all your valuable moments and information, automatically and intelligently.
-                Our mission is to ensure that no memory, no idea, no important detail is ever truly lost.
+    <main class="flex-grow flex items-center justify-center p-8 text-white bg-purple-DEFAULT">
+        <section class="text-center max-w-4xl bg-purple-800 p-8 md:p-12 rounded-none">
+            <h1 class="text-neonGreen-DEFAULT text-4xl sm:text-5xl font-display mb-8">Our Mission: Empowering Your Memory, Fueling Your Creativity.</h1>
+            <p class="text-lg leading-relaxed mb-6 opacity-90">
+                At FORGOR.space, we believe that your best ideas shouldn't be lost in a sea of digital clutter. We built FORGOR.space to be your intelligent second brain, a dedicated space where every screenshot, every interesting link, and every spark of inspiration is not just saved, but understood.
             </p>
-            <p class="text-white text-lg leading-relaxed">
-                We believe in a future where your personal history and knowledge are effortlessly
-                maintained, empowering you to recall, revisit, and build upon your experiences
-                with unparalleled ease.
+            
+            <h2 class="text-neonGreen-DEFAULT text-3xl font-display mb-4 mt-8">The Problem We're Solving</h2>
+            <p class="text-lg leading-relaxed mb-6 opacity-90">
+                In today's fast-paced digital world, we consume vast amounts of information. Designers snap UI examples, developers save code snippets, and creatives collect endless visual references. But without proper organization and context, these valuable assets often get "forgor" (forgotten), buried in unsearchable folders or fleeting browser tabs. The mental overhead of organizing can be overwhelming, leading to missed opportunities and creative blocks.
+            </p>
+            
+            <h2 class="text-neonGreen-DEFAULT text-3xl font-display mb-4 mt-8">Our Solution</h2>
+            <p class="text-lg leading-relaxed mb-6 opacity-90">
+                FORGOR.space leverages cutting-edge AI to automate the tedious parts of content organization. We don't just store your data; we enrich it. Our AI analyzes your images and links, extracting meaningful keywords, themes, moods, and even aesthetic elements. This means you can find what you need instantly, discover hidden connections between your ideas, and receive personalized insights that actively nudge your creativity forward.
+            </p>
+            
+            <h2 class="text-neonGreen-DEFAULT text-3xl font-display mb-4 mt-8">Our Vision</h2>
+            <p class="text-lg leading-relaxed opacity-90">
+                To be the ultimate memory tool for creators, innovators, and anyone who wants to harness the full power of their collected knowledge. We're committed to building a platform that is intuitive, powerful, and deeply respectful of your privacy.
+            </p>
+            
+            {/* Optional: Add a team blurb here */}
+            <p class="text-md leading-relaxed mt-10 opacity-70">
+                FORGOR.space was founded by a team passionate about leveraging AI to enhance human creativity and productivity. We're dedicated to continuous innovation and building a tool that truly makes a difference.
             </p>
         </section>
     </main>

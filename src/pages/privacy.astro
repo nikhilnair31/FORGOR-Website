@@ -1,29 +1,81 @@
 ---
-// src/pages/privacy.astro
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="FORGOR - Privacy Policy">
+<Layout title="FORGOR.space - Privacy Policy">
     <Header />
     
-    <main class="flex-grow flex items-center justify-center p-8">
-        <section class="text-center max-w-3xl">
-            <h1 class="text-white text-4xl sm:text-5xl font-display mb-6">Privacy Policy</h1>
-            <p class="text-white text-lg leading-relaxed mb-4">
-                Your privacy is paramount at FORGOR. We are committed to protecting
-                your personal data and ensuring a secure experience. This policy
-                outlines how we collect, use, and safeguard your information.
+    <main class="flex-grow flex items-center justify-center p-8 text-white bg-purple-DEFAULT">
+        <section class="max-w-5xl bg-purple-800 p-8 md:p-12 rounded-none text-left">
+            <h1 class="text-neonGreen-DEFAULT text-4xl sm:text-5xl font-display mb-8 text-center">Your Privacy, Our Priority.</h1>
+            <p class="text-lg leading-relaxed mb-6 opacity-90">
+                At FORGOR.space, we understand that the content you save is personal and often contains sensitive information. We are committed to protecting your privacy and ensuring the security of your data. This policy outlines how we collect, use, store, and protect your information.
             </p>
-            <p class="text-white text-lg leading-relaxed mb-4">
-                We only collect data necessary to provide and improve our AI memory
-                system, and we never share your personal information with third parties
-                without your explicit consent. All data is encrypted and stored securely.
+
+            <h2 class="text-neonGreen-DEFAULT text-3xl font-display mb-4 mt-8">1. Information We Collect:</h2>
+            <ul class="list-disc list-inside text-lg leading-relaxed mb-6 space-y-3 opacity-90">
+                <li><strong>Account Information:</strong> When you create an account, we collect your username, email address, and hashed password. We also store your chosen timezone for personalized features.</li>
+                <li><strong>Content Data:</strong> When you upload images, image URLs, or other content, we store the file, its associated metadata (e.g., file path, timestamp), and the AI-generated tags (keywords, themes, moods, accent colors, app names, OCR text, engagement counts, links, account identifiers). We also generate and store thumbnails for your content.</li>
+                <li><strong>Usage Data:</strong> We collect anonymous usage statistics to improve our service, such as API call times, feature usage, and aggregate search query patterns. This data is not tied to your personal identity.</li>
+                <li><strong>Interaction Data:</strong> We log interactions with your saved content and links, such as when you click a link from an email digest or view a specific post within the app. This helps us understand your interests and refine future recommendations.</li>
+                <li><strong>Email Preferences:</strong> We store your preferences for receiving summary and digest emails.</li>
+            </ul>
+
+            <h2 class="text-neonGreen-DEFAULT text-3xl font-display mb-4 mt-8">2. How We Use Your Information:</h2>
+            <ul class="list-disc list-inside text-lg leading-relaxed mb-6 space-y-3 opacity-90">
+                <li><strong>To Provide and Improve Our Services:</strong> Your content and AI-generated tags are used to enable core functionalities like searching, organizing, and generating personalized summaries. Usage data helps us optimize performance and develop new features.</li>
+                <li><strong>Personalization:</strong> Your content and interaction data inform the AI models to provide more relevant search results and generate more insightful summaries and digests.</li>
+                <li><strong>Communication:</strong> We use your email address to send account-related notifications, password resets, and if you opt-in, personalized summaries and digests.</li>
+                <li><strong>Security:</strong> We use your information to protect your account and our services from unauthorized access and fraud.</li>
+            </ul>
+
+            <h2 class="text-neonGreen-DEFAULT text-3xl font-display mb-4 mt-8">3. How We Share Your Information:</h2>
+            <ul class="list-disc list-inside text-lg leading-relaxed mb-6 space-y-3 opacity-90">
+                <li><strong>We do not sell your personal data or content to third parties.</strong></li>
+                <li><strong>Third-Party Services:</strong> We use reputable third-party services for essential functions such as:
+                    <ul class="list-circle list-inside ml-4 mt-2 space-y-1">
+                        <li><strong>Cloud Hosting:</strong> To store your files and data securely.</li>
+                        <li><strong>Email Delivery:</strong> To send emails (e.g., SMTP2GO).</li>
+                        <li><strong>AI/ML Services:</strong> For content analysis and embedding (e.g., Google Gemini, Exa AI). These services process your content to generate tags and insights but do not retain your identifiable content for their own training unless explicitly stated in their respective privacy policies. We configure them to process data for <em>our</em> use only.</li>
+                    </ul>
+                </li>
+                <li><strong>Legal Compliance:</strong> We may disclose your information if required by law or in response to valid requests by public authorities.</li>
+            </ul>
+
+            <h2 class="text-neonGreen-DEFAULT text-3xl font-display mb-4 mt-8">4. Data Security:</h2>
+            <p class="text-lg leading-relaxed mb-6 opacity-90">
+                We implement industry-standard security measures, including:
             </p>
-            <p class="text-white text-lg leading-relaxed">
-                By using FORGOR, you agree to the terms outlined in this Privacy Policy.
-                We may update this policy periodically, and any changes will be posted here.
+            <ul class="list-disc list-inside text-lg leading-relaxed mb-6 space-y-3 opacity-90">
+                <li><strong>Encryption:</strong> Data is encrypted in transit and at rest where feasible.</li>
+                <li><strong>Access Controls:</strong> Strict access controls are in place to limit who can access your data.</li>
+                <li><strong>Password Hashing:</strong> Your password is never stored in plain text.</li>
+                <li><strong>Regular Audits:</strong> We regularly review our security practices.</li>
+            </ul>
+
+            <h2 class="text-neonGreen-DEFAULT text-3xl font-display mb-4 mt-8">5. Data Retention:</h2>
+            <p class="text-lg leading-relaxed mb-6 opacity-90">
+                We retain your content and account information for as long as your account is active or as needed to provide you with our services. If you delete your account, your data (including files and database entries) will be permanently removed from our active systems. Backups may retain data for a short period before being purged.
+            </p>
+
+            <h2 class="text-neonGreen-DEFAULT text-3xl font-display mb-4 mt-8">6. Your Rights:</h2>
+            <ul class="list-disc list-inside text-lg leading-relaxed mb-6 space-y-3 opacity-90">
+                <li><strong>Access & Export:</strong> You can request an export of your data at any time via the "Data Export" feature.</li>
+                <li><strong>Correction:</strong> You can update your account information (username, email) in your settings.</li>
+                <li><strong>Deletion:</strong> You can delete your account at any time. This will remove all your content and personal data.</li>
+                <li><strong>Opt-Out:</strong> You can unsubscribe from summary and digest emails directly from the email footer.</li>
+            </ul>
+
+            <h2 class="text-neonGreen-DEFAULT text-3xl font-display mb-4 mt-8">7. Changes to This Policy:</h2>
+            <p class="text-lg leading-relaxed mb-6 opacity-90">
+                We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the new policy on our website or by email.
+            </p>
+
+            <h2 class="text-neonGreen-DEFAULT text-3xl font-display mb-4 mt-8">8. Contact Us:</h2>
+            <p class="text-lg leading-relaxed mb-6 opacity-90">
+                If you have any questions about this Privacy Policy, please contact us at <a href="mailto:nikhil@forgor.space" class="text-neonGreen-DEFAULT hover:underline">nikhil@forgor.space</a>.
             </p>
         </section>
     </main>

@@ -9,16 +9,25 @@ const publicPages = [
     '/privacy',
     '/contact',
 ];
-
 // Determine if the current page is public
 const isPublicPage = publicPages.includes(Astro.url.pathname);
+
+interface Props {
+    title: string;
+    description?: string; // Add this prop
+}
+
+const { title, description = 'FORGOR.space: Your AI-powered memory vault for screenshots, links & ideas. Capture, tag & discover inspiration for Android and Chrome.' } = Astro.props; // Default description
 ---
+
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{Astro.props.title}</title>
     <link rel="icon" href="/icons/favicon.png" type="image/png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />} {/* Render meta description */}
     <style>
         @font-face {
             font-family: 'DisplayFont';
