@@ -4,21 +4,21 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 // --- Placeholder Links (UPDATE THESE WITH YOUR ACTUAL STORE/EXTENSION LINKS) ---
-const PLAY_STORE_LINK = "#"; // Replace with your Google Play Store link
+const PLAY_STORE_LINK = "https://play.google.com/store/apps/details?id=com.sil.buildmode"; // Replace with your Google Play Store link
 const CHROME_STORE_LINK = "#"; // Replace with your Chrome Web Store link
 ---
 
-<Layout title="FORGOR - Never FORGOR an Idea Again">
+<Layout title="FORGOR - Never FORGOR Anything Again">
     <Header />
     
     <main class="relative w-full flex-grow flex flex-col items-center justify-center text-white overflow-hidden py-16 px-4 sm:px-8 bg-purple-DEFAULT">
         <!-- Hero Section -->
         <section class="z-10 text-center max-w-5xl mb-20">
             <h1 class="text-5xl md:text-7xl lg:text-8xl font-display leading-tight mb-6">
-                Never <span class="text-neonGreen-200">FORGOR</span> an Idea Again.
+                Never <span class="text-neonGreen-200">FORGOR</span> Anything Again.
             </h1>
             <p class="text-xl sm:text-2xl mt-6 max-w-3xl mx-auto opacity-90">
-                Your personal AI-powered memory vault for screenshots, links, and everything that sparks inspiration.
+                Your personal AI-powered memory vault for everything that sparks inspiration.
             </p>
             <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-6">
                 <a href={PLAY_STORE_LINK} target="_blank" rel="noopener noreferrer" 
@@ -26,11 +26,12 @@ const CHROME_STORE_LINK = "#"; // Replace with your Chrome Web Store link
                     <img src="/icons/google-play.svg" alt="Google Play Store" class="h-8 w-8 mr-3 rounded-none"/> {/* Placeholder icon */}
                     Get on Android
                 </a>
-                <a href={CHROME_STORE_LINK} target="_blank" rel="noopener noreferrer" 
-                   class="bg-neonGreen text-black font-bold py-4 px-8 rounded-none text-lg sm:text-xl hover:bg-neonGreen-200 transition-colors duration-300 flex items-center justify-center">
-                    <img src="/icons/chrome-web-store.svg" alt="Chrome Web Store" class="h-8 w-8 mr-3 rounded-none"/> {/* Placeholder icon */}
-                    Add to Chrome
-                </a>
+                {/* Chrome Extension - Coming Soon */}
+                <span 
+                    class="bg-brightPurple-DEFAULT text-white font-bold py-4 px-8 rounded-none text-lg sm:text-xl flex items-center justify-center cursor-not-allowed opacity-70">
+                    <img src="/icons/chrome-web-store.svg" alt="Chrome Web Store - Coming Soon" class="h-8 w-8 mr-3 rounded-none"/> {/* Placeholder icon */}
+                    Chrome (Coming Soon)
+                </span>
             </div>
             <p class="mt-6 text-sm opacity-70">Already using FORGOR? Just install and log in!</p>
         </section>
@@ -94,20 +95,16 @@ const CHROME_STORE_LINK = "#"; // Replace with your Chrome Web Store link
             </div>
         </section>
 
-        {/* Testimonials (Optional) */}
-        <section class="z-20 w-full max-w-4xl mt-20 text-center">
-            <h2 class="text-4xl font-display mb-12">What Users Are Saying</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-purple-800 p-8 rounded-none text-left">
-                    <p class="text-xl italic mb-4">"FORGOR has transformed how I manage my design inspiration. The AI tagging is a game-changer!"</p>
-                    <p class="font-bold text-neonGreen-DEFAULT text-lg">— [Designer Name]</p>
-                </div>
-                <div class="bg-purple-800 p-8 rounded-none text-left">
-                    <p class="text-xl italic mb-4">"Finally, a tool that helps me make sense of my endless screenshots. The weekly summaries are surprisingly insightful."</p>
-                    <p class="font-bold text-neonGreen-DEFAULT text-lg">— [Developer Name]</p>
-                </div>
+        {/* Cheeky Testimonial Section */}
+        <div class="w-full max-w-xl mx-auto mt-24 text-center">
+            <h2 class="text-4xl font-display mb-8">What Users Are Saying</h2>
+            <div class="bg-purple-DEFAULT p-8 rounded-none text-left">
+                <p class="text-xl italic mb-4">
+                    "As the sole user, I can confidently say: FORGOR is absolutely game-changing. 10/10, would recommend to myself again."
+                </p>
+                <p class="font-bold text-neonGreen-DEFAULT text-lg">— Nikhil, The Creator & Our Most Dedicated User</p>
             </div>
-        </section>
+        </div>
         
         {/* Final CTA */}
         <section class="z-20 w-full text-center mt-20">
@@ -117,11 +114,6 @@ const CHROME_STORE_LINK = "#"; // Replace with your Chrome Web Store link
                    class="bg-neonGreen text-black font-bold py-4 px-10 rounded-none text-xl hover:bg-neonGreen-200 transition-colors duration-300 flex items-center justify-center">
                     <img src="/icons/google-play.svg" alt="Google Play Store" class="h-8 w-8 mr-3 rounded-none"/> {/* Placeholder icon */}
                     Get on Android
-                </a>
-                <a href={CHROME_STORE_LINK} target="_blank" rel="noopener noreferrer" 
-                   class="bg-neonGreen text-black font-bold py-4 px-10 rounded-none text-xl hover:bg-neonGreen-200 transition-colors duration-300 flex items-center justify-center">
-                    <img src="/icons/chrome-web-store.svg" alt="Chrome Web Store" class="h-8 w-8 mr-3 rounded-none"/> {/* Placeholder icon */}
-                    Add to Chrome
                 </a>
             </div>
             <p class="mt-6 text-sm opacity-70">Already installed? Log in to sync your memory vault.</p>

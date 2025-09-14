@@ -41,6 +41,4 @@
 
 ### To-Do
 - [ ] If login clicked from landing then take to app
-- [ ] Improve each page's contents
-- [ ] Add images
 - [ ] Add actual links to extension and play store
