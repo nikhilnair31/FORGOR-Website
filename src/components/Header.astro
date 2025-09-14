@@ -1,18 +1,30 @@
 ---
 // src/components/Header.astro
+const currentPath = Astro.url.pathname;
 ---
+
 <header class="flex justify-between items-center p-6">
     <a href="/" class="flex items-center">
+        {currentPath !== '/' && (
         <img src="/icons/favicon.png" alt="FORGOR Icon" class="h-10 w-10"/>
+        )}
     </a>
-    <nav class="flex items-center gap-10 text-sm uppercase tracking-widest">
-        <a href="/about" class="hover:underline">About</a>
-        <a href="/privacy" class="hover:underline">Privacy</a>
-        <a href="/contact" class="hover:underline">Contact</a>
-        
-        {/* Login/Signup Button - No rounding */}
-        <a href="/login" class="inline-block bg-neonGreen text-purple-900 font-bold py-3 px-6 hover:opacity-90 ml-4">
-            Sign Up / Log In
+    <nav class="flex items-center h-10 gap-10 text-sm uppercase tracking-widest">
+        <a href="/"
+            class={`font-[DisplayFont] ${currentPath === '/' ? 'underline' : ''} text-white hover:bold`}>
+            Home
+        </a>
+        <a href="/about"
+            class={`font-[DisplayFont] ${currentPath === '/about' ? 'underline' : ''} text-white hover:bold`}>
+            About
+        </a>
+        <a href="/privacy"
+            class={`font-[DisplayFont] ${currentPath === '/privacy' ? 'underline' : ''} text-white hover:bold`}>
+            Privacy
+        </a>
+        <a href="/contact"
+            class={`font-[DisplayFont] ${currentPath === '/contact' ? 'underline' : ''} text-white hover:bold`}>
+            Contact
         </a>
     </nav>
 </header>

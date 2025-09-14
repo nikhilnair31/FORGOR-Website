@@ -1,15 +1,13 @@
 ---
 // src/layouts/Layout.astro
 import '../styles/tailwind.css';
-import AuthRedirect from '../components/AuthRedirect.astro'; // <-- Import the new component
 
 // Define pages that are publicly accessible (don't require auth)
 const publicPages = [
-  '/', // Landing page
-  '/about',
-  '/privacy',
-  '/contact',
-  '/login', // Login page itself must be accessible
+    '/', // Landing page
+    '/about',
+    '/privacy',
+    '/contact',
 ];
 
 // Determine if the current page is public
@@ -31,9 +29,7 @@ const isPublicPage = publicPages.includes(Astro.url.pathname);
 <body class="bg-purple text-white font-sans min-h-screen flex flex-col">
     <slot />
 
-    {/* Conditionally include AuthRedirect only on non-public pages */}
-    {/* If it's NOT a public page, then include AuthRedirect */}
-    {!isPublicPage && <AuthRedirect />}
+    {!isPublicPage}
 
 </body>
 </html>
