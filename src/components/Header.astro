@@ -4,7 +4,7 @@ const currentPath = Astro.url.pathname;
 ---
 
 <header class="flex justify-between items-center p-6 max-w-full overflow-hidden">
-    <a href="/" class="flex items-center">
+    <a href="/" class="flex items-center w-40">
         {currentPath !== '/' && (
         <img src="/icons/favicon.png" alt="FORGOR Icon" class="h-10 w-10"/>
         )}
@@ -13,10 +13,6 @@ const currentPath = Astro.url.pathname;
         <a href="/"
             class={`font-[DisplayFont] ${currentPath === '/' ? 'underline' : ''} text-white hover:bold px-4`}>
             Home
-        </a>
-        <a href="/about"
-            class={`font-[DisplayFont] ${currentPath === '/about/' ? 'underline' : ''} text-white hover:bold px-4`}>
-            About
         </a>
         <a href="/privacy"
             class={`font-[DisplayFont] ${currentPath === '/privacy/' ? 'underline' : ''} text-white hover:bold px-4`}>
