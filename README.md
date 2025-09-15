@@ -40,5 +40,4 @@
 ## Tasks
 
 ### To-Do
-- [ ] If login clicked from landing then take to app
 - [ ] Add actual links to extension and play store
