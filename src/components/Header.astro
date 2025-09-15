@@ -3,27 +3,27 @@
 const currentPath = Astro.url.pathname;
 ---
 
-<header class="flex justify-between items-center p-6">
+<header class="flex justify-between items-center p-6 max-w-full overflow-hidden">
     <a href="/" class="flex items-center">
         {currentPath !== '/' && (
         <img src="/icons/favicon.png" alt="FORGOR Icon" class="h-10 w-10"/>
         )}
     </a>
-    <nav class="flex items-center h-10 gap-10 text-sm uppercase tracking-widest">
+    <nav class="flex items-center h-10 text-sm uppercase tracking-widest overflow-x-auto whitespace-nowrap">
         <a href="/"
-            class={`font-[DisplayFont] ${currentPath === '/' ? 'underline' : ''} text-white hover:bold`}>
+            class={`font-[DisplayFont] ${currentPath === '/' ? 'underline' : ''} text-white hover:bold px-4`}>
             Home
         </a>
         <a href="/about"
-            class={`font-[DisplayFont] ${currentPath === '/about/' ? 'underline' : ''} text-white hover:bold`}>
+            class={`font-[DisplayFont] ${currentPath === '/about/' ? 'underline' : ''} text-white hover:bold px-4`}>
             About
         </a>
         <a href="/privacy"
-            class={`font-[DisplayFont] ${currentPath === '/privacy/' ? 'underline' : ''} text-white hover:bold`}>
+            class={`font-[DisplayFont] ${currentPath === '/privacy/' ? 'underline' : ''} text-white hover:bold px-4`}>
             Privacy
         </a>
         <a href="/contact"
-            class={`font-[DisplayFont] ${currentPath === '/contact/' ? 'underline' : ''} text-white hover:bold`}>
+            class={`font-[DisplayFont] ${currentPath === '/contact/' ? 'underline' : ''} text-white hover:bold px-4`}>
             Contact
         </a>
     </nav>

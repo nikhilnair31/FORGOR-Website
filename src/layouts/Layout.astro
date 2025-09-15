@@ -27,7 +27,7 @@ const { title, description = 'FORGOR.space: Your AI-powered memory vault for scr
     <link rel="icon" href="/icons/favicon.png" type="image/png" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    {description && <meta name="description" content={description} />} {/* Render meta description */}
+    {description && <meta name="description" content={description} />}
     <style>
         @font-face {
             font-family: 'DisplayFont';
@@ -35,7 +35,7 @@ const { title, description = 'FORGOR.space: Your AI-powered memory vault for scr
         }
     </style>
 </head>
-<body class="bg-purple text-white font-sans min-h-screen flex flex-col">
+<body class="bg-purple text-white font-sans min-h-screen flex flex-col max-w-full overflow-x-hidden">
     <slot />
 
     {!isPublicPage}
