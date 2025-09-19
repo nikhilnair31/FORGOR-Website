@@ -1,0 +1,47 @@
+---
+const features = [
+    {
+        icon: "/icons/capture.svg",
+        title: "Capture Anything, Anywhere",
+        text: "Easily save screenshots from your Android phone or web pages with our Chrome Extension."
+    },
+    {
+        icon: "/icons/robot.svg",
+        title: "AI-Powered Tagging",
+        text: "Our intelligent AI automatically extracts keywords, themes, moods, and even accent colors, making content effortlessly searchable."
+    },
+    {
+        icon: "/icons/search.svg",
+        title: "Smart Search & Discovery",
+        text: "Find exactly what you need with powerful semantic search, re-discover old ideas, and explore related content."
+    },
+    {
+        icon: "/icons/mail.svg",
+        title: "Personalized Insights",
+        text: "Receive weekly or monthly AI-generated summaries of your saved content, highlighting trends and offering actionable insights."
+    },
+    {
+        icon: "/icons/encrypted.svg",
+        title: "Private & Secure",
+        text: "Your ideas are yours alone. FORGOR uses robust security measures to keep your data safe and private."
+    },
+    {
+        icon: "/icons/sparkles.svg",
+        title: "Fuel Your Creativity",
+        text: "Turn passive collection into active inspiration, helping you connect the dots and spark your next big idea."
+    }
+];
+---
+
+<section class="z-20 w-full max-w-6xl mt-20 text-center">
+    <h2 class="text-4xl font-display mb-12">How FORGOR Empowers You</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        {features.map(({ icon, title, text }) => (
+        <div class="flex flex-col items-center p-6 bg-purple-800 rounded-none">
+            <img src={icon} alt={title} class="h-16 w-16 text-neonGreen-DEFAULT mb-4 rounded-none"/>
+            <h3 class="text-2xl font-display text-neonGreen-DEFAULT mb-3">{title}</h3>
+            <p class="text-lg opacity-80">{text}</p>
+        </div>
+        ))}
+    </div>
+</section>

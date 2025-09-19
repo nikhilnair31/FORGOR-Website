@@ -1,68 +1,83 @@
 ---
-// privacy.astro
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="FORGOR - Privacy Policy">
-    <Header />
-    
-    <main class="flex-grow flex items-center justify-center p-8 text-white bg-purple-DEFAULT">
-        <section class="max-w-3xl bg-purple-800 p-8 md:p-12 text-left">
-            <h1 class="text-neonGreen-DEFAULT text-4xl sm:text-5xl font-display mb-8 text-center">
-                YOUR PRIVACY MATTERS
-            </h1>
-            
-            <p class="text-lg leading-relaxed mb-6 opacity-90">
-                We keep it simple: your data is yours. Here’s what that means.
-            </p>
+  <Header />
 
-            <h2 class="text-neonGreen-DEFAULT text-2xl font-display mb-4 mt-8">What We Collect</h2>
-            <ul class="list-disc list-inside text-lg leading-relaxed mb-6 opacity-90 space-y-2">
-                <li>Account info: email, username, hashed password.</li>
-                <li>Uploads: files, metadata, and AI-generated tags.</li>
-                <li>Usage data: anonymous stats to improve performance.</li>
-                <li>Interaction data: clicks and views to refine recommendations.</li>
-            </ul>
+  <main class="flex-grow flex justify-center px-6 py-16 text-white bg-purple-DEFAULT">
+    <section class="max-w-6xl w-full">
+      <!-- Page title -->
+      <h1 class="text-4xl sm:text-5xl font-display mb-12 text-center">
+        Your Privacy Matters
+      </h1>
 
-            <h2 class="text-neonGreen-DEFAULT text-2xl font-display mb-4 mt-8">How We Use It</h2>
-            <ul class="list-disc list-inside text-lg leading-relaxed mb-6 opacity-90 space-y-2">
-                <li>Run core features like search and summaries.</li>
-                <li>Make results and digests more relevant.</li>
-                <li>Send you account updates and optional emails.</li>
-                <li>Keep accounts secure and block fraud.</li>
-            </ul>
+      <!-- Blocks -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-purple-800 p-6 md:p-8 rounded-none">
+          <h2 class="text-2xl font-display text-neonGreen-DEFAULT mb-3">What We Collect</h2>
+          <ul class="list-disc list-inside text-lg leading-relaxed opacity-90 space-y-2">
+            <li>Account info: email, username, hashed password.</li>
+            <li>Uploads: files, metadata, and AI-generated tags.</li>
+            <li>Usage data: anonymous stats to improve performance.</li>
+            <li>Interaction data: clicks and views to refine recommendations.</li>
+          </ul>
+        </div>
 
-            <h2 class="text-neonGreen-DEFAULT text-2xl font-display mb-4 mt-8">Sharing</h2>
-            <p class="text-lg leading-relaxed mb-6 opacity-90">
-                We don’t sell your data. We only use trusted third-party tools (hosting, email, AI services) to keep FORGOR running. We may share info if required by law.
-            </p>
+        <div class="bg-purple-800 p-6 md:p-8 rounded-none">
+          <h2 class="text-2xl font-display text-neonGreen-DEFAULT mb-3">How We Use It</h2>
+          <ul class="list-disc list-inside text-lg leading-relaxed opacity-90 space-y-2">
+            <li>Run core features like search and summaries.</li>
+            <li>Make results and digests more relevant.</li>
+            <li>Send you account updates and optional emails.</li>
+            <li>Keep accounts secure and block fraud.</li>
+          </ul>
+        </div>
 
-            <h2 class="text-neonGreen-DEFAULT text-2xl font-display mb-4 mt-8">Security</h2>
-            <p class="text-lg leading-relaxed mb-6 opacity-90">
-                Data is encrypted, passwords are hashed, and access is restricted. We review our security practices regularly.
-            </p>
+        <div class="bg-purple-800 p-6 md:p-8 rounded-none">
+          <h2 class="text-2xl font-display text-neonGreen-DEFAULT mb-3">Sharing</h2>
+          <p class="text-lg leading-relaxed opacity-90">
+            We don’t sell your data. We only use trusted third-party tools (hosting, email, AI services) to keep FORGOR running.  
+            We may share info if required by law.
+          </p>
+        </div>
 
-            <h2 class="text-neonGreen-DEFAULT text-2xl font-display mb-4 mt-8">Your Choices</h2>
-            <ul class="list-disc list-inside text-lg leading-relaxed mb-6 opacity-90 space-y-2">
-                <li>Export your data anytime.</li>
-                <li>Update account info in settings.</li>
-                <li>Delete your account to remove all data.</li>
-                <li>Unsubscribe from emails in the footer.</li>
-            </ul>
+        <div class="bg-purple-800 p-6 md:p-8 rounded-none">
+          <h2 class="text-2xl font-display text-neonGreen-DEFAULT mb-3">Security</h2>
+          <p class="text-lg leading-relaxed opacity-90">
+            Data is encrypted, passwords are hashed, and access is restricted.  
+            We review our security practices regularly.
+          </p>
+        </div>
 
-            <h2 class="text-neonGreen-DEFAULT text-2xl font-display mb-4 mt-8">Updates</h2>
-            <p class="text-lg leading-relaxed mb-6 opacity-90">
-                If we change this policy, we’ll post it here and notify you if it’s major.
-            </p>
+        <div class="bg-purple-800 p-6 md:p-8 rounded-none">
+          <h2 class="text-2xl font-display text-neonGreen-DEFAULT mb-3">Your Choices</h2>
+          <ul class="list-disc list-inside text-lg leading-relaxed opacity-90 space-y-2">
+            <li>Export your data anytime.</li>
+            <li>Update account info in settings.</li>
+            <li>Delete your account to remove all data.</li>
+            <li>Unsubscribe from emails in the footer.</li>
+          </ul>
+        </div>
 
-            <h2 class="text-neonGreen-DEFAULT text-2xl font-display mb-4 mt-8">Contact</h2>
-            <p class="text-lg leading-relaxed mb-6 opacity-90">
-                Questions? Email <a href="mailto:nikhil@forgor.space" class="text-neonGreen-DEFAULT hover:underline">nikhil@forgor.space</a>.
-            </p>
-        </section>
-    </main>
-    
-    <Footer />
+        <div class="bg-purple-800 p-6 md:p-8 rounded-none">
+          <h2 class="text-2xl font-display text-neonGreen-DEFAULT mb-3">Updates</h2>
+          <p class="text-lg leading-relaxed opacity-90">
+            If we change this policy, we’ll post it here and notify you if it’s major.
+          </p>
+        </div>
+
+        <div class="bg-purple-800 p-6 md:p-8 rounded-none md:col-span-2">
+          <h2 class="text-2xl font-display text-neonGreen-DEFAULT mb-3">Contact</h2>
+          <p class="text-lg leading-relaxed opacity-90">
+            Questions? Email <a href="mailto:nikhil@forgor.space" class="text-neonGreen-DEFAULT hover:underline">nikhil@forgor.space</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
 </Layout>

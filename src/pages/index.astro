@@ -2,6 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import Steps from '../components/Steps.astro';
+import Features from '../components/Features.astro';
+import Testimonials from '../components/Testimonials.astro';
+import FAQ from '../components/FAQ.astro';
 
 // --- Placeholder Links (UPDATE THESE WITH YOUR ACTUAL STORE/EXTENSION LINKS) ---
 const PLAY_STORE_LINK = "https://play.google.com/store/apps/details?id=com.sil.buildmode"; // Replace with your Google Play Store link
@@ -13,111 +18,19 @@ const CHROME_STORE_LINK = "https://chromewebstore.google.com/detail/forgor/fgalo
     
     <main class="relative w-full flex-grow flex flex-col items-center justify-center text-white overflow-hidden py-16 px-4 sm:px-8 bg-purple-DEFAULT">
         <!-- Hero Section -->
-        <section class="z-10 text-center max-w-5xl mb-20">
-            <h1 class="text-5xl md:text-7xl lg:text-8xl font-display leading-tight mb-6">
-                Never <span class="text-neonGreen-200">FORGOR</span> Anything Again.
-            </h1>
-            <img 
-                src="/icons/icon.png" 
-                alt="Background Accent" 
-                class="absolute -z-10 top-0 right-60 w-24 md:w-40 opacity-100 pointer-events-none select-none"
-            />
-            <p class="text-xl sm:text-2xl mt-6 max-w-3xl mx-auto opacity-90">
-                Your personal AI-powered memory vault for everything that sparks inspiration.
-            </p>
-            <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-6">
-                <a href={PLAY_STORE_LINK} target="_blank" rel="noopener noreferrer" 
-                   class="bg-neonGreen text-black font-bold py-4 px-8 rounded-none text-lg sm:text-xl hover:bg-neonGreen-200 transition-colors duration-300 flex items-center justify-center">
-                    <img src="/icons/google-play.svg" alt="Google Play Store" class="h-8 w-8 mr-3 rounded-none"/> {/* Placeholder icon */}
-                    Get on Android
-                </a>
-                <a href={CHROME_STORE_LINK} target="_blank" rel="noopener noreferrer" 
-                   class="bg-neonGreen text-black font-bold py-4 px-8 rounded-none text-lg sm:text-xl hover:bg-neonGreen-200 transition-colors duration-300 flex items-center justify-center">
-                    <img src="/icons/chrome-web-store.svg" alt="Chrome Web Store" class="h-8 w-8 mr-3 rounded-none"/> {/* Placeholder icon */}
-                    Get on Android
-                </a>
-            </div>
-            <p class="mt-6 text-sm opacity-70">Already using FORGOR? Just install and log in!</p>
-        </section>
+        <Hero />
 
         <!-- Key Features Section -->
-        <section class="z-20 w-full max-w-6xl mt-20 text-center">
-            <h2 class="text-4xl font-display mb-12">How FORGOR Empowers You</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <div class="flex flex-col items-center p-6 bg-purple-800 rounded-none">
-                    <img src="/icons/capture.svg" alt="Capture Icon" class="h-16 w-16 text-neonGreen-DEFAULT mb-4 rounded-none"/> {/* Placeholder icon */}
-                    <h3 class="text-2xl font-display text-neonGreen-DEFAULT mb-3">Capture Anything, Anywhere</h3>
-                    <p class="text-lg opacity-80">Easily save screenshots from your Android phone or web pages with our Chrome Extension.</p>
-                </div>
-                <div class="flex flex-col items-center p-6 bg-purple-800 rounded-none">
-                    <img src="/icons/robot.svg" alt="AI Tagging Icon" class="h-16 w-16 text-neonGreen-DEFAULT mb-4 rounded-none"/> {/* Placeholder icon */}
-                    <h3 class="text-2xl font-display text-neonGreen-DEFAULT mb-3">AI-Powered Tagging</h3>
-                    <p class="text-lg opacity-80">Our intelligent AI automatically extracts keywords, themes, moods, and even accent colors, making content effortlessly searchable.</p>
-                </div>
-                <div class="flex flex-col items-center p-6 bg-purple-800 rounded-none">
-                    <img src="/icons/search.svg" alt="Search Icon" class="h-16 w-16 text-neonGreen-DEFAULT mb-4 rounded-none"/> {/* Placeholder icon */}
-                    <h3 class="text-2xl font-display text-neonGreen-DEFAULT mb-3">Smart Search & Discovery</h3>
-                    <p class="text-lg opacity-80">Find exactly what you need with powerful semantic search, re-discover old ideas, and explore related content.</p>
-                </div>
-                <div class="flex flex-col items-center p-6 bg-purple-800 rounded-none">
-                    <img src="/icons/mail.svg" alt="Email Icon" class="h-16 w-16 text-neonGreen-DEFAULT mb-4 rounded-none"/> {/* Placeholder icon */}
-                    <h3 class="text-2xl font-display text-neonGreen-DEFAULT mb-3">Personalized Insights</h3>
-                    <p class="text-lg opacity-80">Receive weekly or monthly AI-generated summaries of your saved content, highlighting trends and offering actionable insights.</p>
-                </div>
-                <div class="flex flex-col items-center p-6 bg-purple-800 rounded-none">
-                    <img src="/icons/encrypted.svg" alt="Security Icon" class="h-16 w-16 text-neonGreen-DEFAULT mb-4 rounded-none"/> {/* Placeholder icon */}
-                    <h3 class="text-2xl font-display text-neonGreen-DEFAULT mb-3">Private & Secure</h3>
-                    <p class="text-lg opacity-80">Your ideas are yours alone. FORGOR uses robust security measures to keep your data safe and private.</p>
-                </div>
-                <div class="flex flex-col items-center p-6 bg-purple-800 rounded-none">
-                    <img src="/icons/sparkles.svg" alt="Creativity Icon" class="h-16 w-16 text-neonGreen-DEFAULT mb-4 rounded-none"/> {/* Placeholder icon */}
-                    <h3 class="text-2xl font-display text-neonGreen-DEFAULT mb-3">Fuel Your Creativity</h3>
-                    <p class="text-lg opacity-80">Turn passive collection into active inspiration, helping you connect the dots and spark your next big idea.</p>
-                </div>
-            </div>
-        </section>
+        <Features />
 
         <!-- How It Works Section -->
-        <section class="z-20 w-full max-w-6xl mt-20 text-center">
-            <h2 class="text-4xl font-display mb-12">How It Works</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="flex flex-col items-center p-6 bg-purple-800">
-                    <div class="bg-neonGreen-DEFAULT text-brightPurple font-bold rounded-none h-16 w-16 flex items-center justify-center text-3xl mb-4">1</div>
-                    <h3 class="text-2xl font-display text-neonGreen-DEFAULT mb-2">Install</h3>
-                    <p class="text-lg opacity-80">Get the app on Android or add our extension to Chrome.</p>
-                </div>
-                <div class="flex flex-col items-center p-6 bg-purple-800">
-                    <div class="bg-neonGreen-DEFAULT text-brightPurple font-bold rounded-none h-16 w-16 flex items-center justify-center text-3xl mb-4">2</div>
-                    <h3 class="text-2xl font-display text-neonGreen-DEFAULT mb-2">Capture</h3>
-                    <p class="text-lg opacity-80">Save screenshots and links effortlessly from your devices.</p>
-                </div>
-                <div class="flex flex-col items-center p-6 bg-purple-800">
-                    <div class="bg-neonGreen-DEFAULT text-brightPurple font-bold rounded-none h-16 w-16 flex items-center justify-center text-3xl mb-4">3</div>
-                    <h3 class="text-2xl font-display text-neonGreen-DEFAULT mb-2">Remember</h3>
-                    <p class="text-lg opacity-80">Search, explore, and get AI-powered insights to effortlessly recall and build upon your ideas.</p>
-                </div>
-            </div>
-        </section>
+        <Steps />
 
         <!-- Cheeky Testimonial Section -->
-        <div class="z-20 w-full max-w-6xl mt-20 text-center">
-            <h2 class="text-4xl font-display mb-8">What Users Are Saying</h2>
-            <div class="flex flex-col md:flex-row justify-center md:gap-10 gap-8">
-                <div class="flex flex-col items-center p-6 bg-purple-800 w-full md:flex-1">
-                    <p class="text-xl italic mb-4">
-                        "As the sole user, I can confidently say: FORGOR is absolutely game-changing. 10/10, would recommend to myself again."
-                    </p>
-                    <p class="font-bold text-neonGreen-DEFAULT text-lg">— Nikhil, Creator & Most Dedicated User</p>
-                </div>
-
-                <div class="flex flex-col items-center p-6 bg-purple-800 w-full md:flex-1">
-                    <p class="text-xl italic mb-4">
-                        "Love FORGOR's daily digest and recommendations!"
-                    </p>
-                    <p class="font-bold text-neonGreen-DEFAULT text-lg">— Another User</p>
-                </div>
-            </div>
-        </div>
+        <Testimonials />
+        
+        <!-- FAQ Section -->
+        <FAQ />
 
         <!-- Final CTA -->
         <section class="z-20 w-full text-center mt-20">
@@ -131,7 +44,7 @@ const CHROME_STORE_LINK = "https://chromewebstore.google.com/detail/forgor/fgalo
                 <a href={CHROME_STORE_LINK} target="_blank" rel="noopener noreferrer" 
                    class="bg-neonGreen text-black font-bold py-4 px-8 rounded-none text-lg sm:text-xl hover:bg-neonGreen-200 transition-colors duration-300 flex items-center justify-center">
                     <img src="/icons/chrome-web-store.svg" alt="Chrome Web Store" class="h-8 w-8 mr-3 rounded-none"/> {/* Placeholder icon */}
-                    Get on Android
+                    Get on Chrome
                 </a>
             </div>
             <p class="mt-6 text-sm opacity-70">Already installed? Log in to sync your memory vault.</p>

@@ -1,0 +1,17 @@
+---
+import { faqs } from '../data/faqs';
+---
+
+<section class="z-20 w-full max-w-4xl mt-20">
+    <h2 class="text-4xl font-display mb-8 text-center">FAQ</h2>
+    <div class="space-y-4">
+        {faqs.map(({ q, a }) => (
+        <details class="bg-purple-800 p-4 rounded-none">
+            <summary class="cursor-pointer text-neonGreen-DEFAULT font-display text-xl">
+            {q}
+            </summary>
+            <p class="mt-2 text-lg opacity-80">{a}</p>
+        </details>
+        ))}
+    </div>
+</section>

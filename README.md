@@ -1,6 +1,8 @@
 # FORGOR Website
 
-## Initial
+## Setup
+
+### Initial
 - Clone into git repo
 - Move out of root `sudo mv /root/projects/<git-folder> /var/www/`
 - Ensure permissions
@@ -9,7 +11,7 @@
     sudo chmod -R 755 /var/www/<git-folder>
     ``` 
 
-## Reverse Proxy
+### Reverse Proxy
 
 ### NGINX Setup
 - Have domain
@@ -37,7 +39,5 @@
 - Run this `sudo certbot --nginx -d <name>.xyz -d www.<name>.xyz`
 - Check for cron job for auto reneew SSL cert with `sudo certbot renew --dry-run`
 
-## Tasks
-
-### To-Do
-- [ ] Add actual links to extension and play store
+## To-Do
+- [ ] Add images
